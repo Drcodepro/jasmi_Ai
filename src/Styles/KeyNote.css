@@ -1,0 +1,193 @@
+.keyNotePage{
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: white;
+    gap: 6rem;
+
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width:1px;
+        height: 1px;
+        border-radius: 50%;
+    
+        box-shadow: 0 0 600px 200px #00407469;
+        z-index: -1;
+    }
+    
+    &::after{
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 90%;
+      width:1px;
+      height: 1px;
+      border-radius: 50%;
+    
+      box-shadow: 0 0 600px 200px #00407469;
+      z-index: -1;
+    }
+}
+
+.keyNotePage .keynotePoster{
+    width: 95%;
+    object-fit: cover;
+}
+
+.keyNotePage .keynotePoster_mobile{
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+
+.keyNotePage .keyNoteMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: 5%;
+        width:1px;
+        height: 1px;
+        border-radius: 50%;
+      
+        box-shadow: 0 0 600px 200px #00407469;
+        z-index: -1;
+      }
+}
+
+
+
+.keyNotePage .keyNoteHeading{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+
+.keyNotePage .keyNoteMain .keyNotePoint_container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.keyNotePoint_container .keyNotePoint{
+    width: 100%;
+    border: solid 1px rgb(86, 86, 86);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px #a4a4a4;
+    background-color: black;
+}
+
+
+.keyNotePoint .pointHeading{
+    width: 100%;
+    text-align: start;
+    background-color:#060079;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    box-shadow: 0 1px 5px 1px rgba(255, 255, 255, 0.252) ;
+}
+
+
+.keyNotePoint .pointInfoBox{
+    width: 100%;
+    padding:1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(161, 161, 161);
+}
+
+.pointInfoBox img{
+    width: 2.5rem;
+}
+
+
+@media (max-width:900px) {
+    .keyNotePage .keynotePoster{
+        width: 100%;
+    }
+    .keyNotePage .keyNoteMain .keyNotePoint_container{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:560px) {
+    .keyNotePage{
+        padding: 0 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        gap: 5rem;
+    }
+
+    .keyNotePage .keynotePoster{
+        display: none;
+    }
+    
+    .keyNotePage .keynotePoster_mobile{
+        display: block
+    }
+
+    .keyNotePage .keyNoteHeading{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .keyNotePoint .pointHeading{
+        text-align:center;
+        padding: 0.5rem 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .keyNotePoint .pointInfoBox{
+        padding:1.5rem 0.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .pointInfoBox img{
+        width: 4rem;
+    }
+
+}
